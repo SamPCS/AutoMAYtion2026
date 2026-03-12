@@ -1,4 +1,4 @@
-# AutoMAYtion2026: ImmyBot Onboarding Handler
+# 🤖🚀 AutoMAYtion2026: ImmyBot Onboarding Handler
 
 The **ImmyBot Onboarding Handler** extends the functionality of Rewst’s **Microsoft: User Onboarding** Crate by introducing advanced ImmyBot-specific options directly into the onboarding process.
 
@@ -6,7 +6,7 @@ By adding additional fields to the onboarding form, this automation can automati
 
 ---
 
-## 1. Installation
+## 🛠️ 1. Installation
 
 This automation assumes the following prerequisites:
 
@@ -17,7 +17,7 @@ This automation assumes the following prerequisites:
 
 ---
 
-### Import Form Bundle
+### 📄⬇️ Import Form Bundle
 
 1. Navigate to the **Immy Onboarding Handler** folder.
 2. Download the form bundle:  
@@ -33,7 +33,7 @@ This automation assumes the following prerequisites:
 
 ---
 
-### Import Workflow Bundle
+### 🔄⬇️ Import Workflow Bundle
 
 1. Navigate to the **Immy Onboarding Handler** folder.
 2. Download the workflow bundle:  
@@ -49,7 +49,7 @@ This automation assumes the following prerequisites:
 
 ---
 
-### Configure Form Trigger
+### ⚙️📝 Configure Form Trigger
 
 1. Open the **Microsoft: User Onboarding** workflow in the Workflow Builder.
 2. Create a new **Form Trigger**.
@@ -59,7 +59,7 @@ This automation assumes the following prerequisites:
 
 ---
 
-### Configure Completion Handler
+### ✅⚙️ Configure Completion Handler
 
 1. While still in the **Microsoft: User Onboarding** workflow:
    - Create a new **Completion Handler**.
@@ -70,7 +70,7 @@ This automation assumes the following prerequisites:
 
 ---
 
-## 2. Usage
+## ▶️ 2. Usage
 
 To use this workflow:
 
@@ -83,7 +83,7 @@ To use this workflow:
 
 ---
 
-### Prepare an Existing Computer
+### 💻♻️ Prepare an Existing Computer
 
 - Select **Use Existing Computer**
 - Choose the appropriate **ImmyBot computer** and **user** from the dropdown menus
@@ -96,7 +96,7 @@ This will:
 
 ---
 
-### Prepare a New Computer
+### 🆕💻 Prepare a New Computer
 
 - Select **New Immy Installer**
 - Choose your preferred **ImmyBot installer format**
@@ -110,16 +110,15 @@ Available options:
 - **Post-OOBE (.ps1)**  
   - Attaches a PowerShell script directly to the ticket
 
-
 ---
 
 By leveraging this completion handler, technicians can onboard users and begin hardware preparation from a single submission—streamlining both identity and device readiness workflows.
 
 ---
 
-## 3. Improvement Ideas
+## 💡 3. Improvement Ideas
 
-### ImmyBot Azure Sync After M365 Onboarding
+### ☁️🔄 ImmyBot Azure Sync After M365 Onboarding
 
 Some organizations frequently rehire former interns or contractors. In these cases, users may already exist in Azure AD and ImmyBot, allowing immediate device reassignment through this workflow.
 
@@ -133,7 +132,7 @@ Trigger an ImmyBot Azure sync after Microsoft 365 onboarding completes to enable
 
 ---
 
-### Onboarding Customizations
+### 🎛️ Onboarding Customizations
 
 Additional customization options can be enabled for each ImmyBot installer, including:
 
