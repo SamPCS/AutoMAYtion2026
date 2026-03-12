@@ -27,7 +27,9 @@ This automation assumes the following prerequisites:
 5. Drag and drop the downloaded form bundle.
 6. Review the objects to be imported and confirm the selection.
 
-> 📸 *Screenshots of the form import process can be added here.*
+![Form bundle import screen](images/formImport.png)
+
+![Form accept import screen](images/acceptConfiguration.png)
 
 ---
 
@@ -41,7 +43,9 @@ This automation assumes the following prerequisites:
 5. Drag and drop the downloaded workflow bundle.
 6. Review the objects to be imported and confirm the selection.
 
-> 📸 *Screenshots of the workflow import process can be added here.*
+![WF bundle import screen](images/workflowImport.png)
+
+![WF accept import screen](images/workflowAccept.png)
 
 ---
 
