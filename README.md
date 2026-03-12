@@ -1,44 +1,146 @@
-# AutoMAYtion2026: Immybot Onboarding Handler
-This automation adds additional features to the functionality of Rewst's Microsoft: User Onboarding Crate. By providing some additional options on the Onboarding form, this autoamtion can automatically generate your choice of ImmyBot Installer and add it to the onboarding ticket. If the user is to recieve a machine already deployed on site, you can instead reassign and begin a maitenance session on that machine so the user is ready to start on day 1!
+# AutoMAYtion2026: ImmyBot Onboarding Handler
 
-1. Installation
+The **ImmyBot Onboarding Handler** extends the functionality of Rewst’s **Microsoft: User Onboarding** Crate by introducing advanced ImmyBot-specific options directly into the onboarding process.
 
-   This automation assumes you have an Immybot Integation setup in your Rewst environment, and that you have unpacked the Microsoft: User Onboarding Crate. My version uses Connectwise PSA as the ticketing system, but with some tweaks this workflow can be applied to other ticketing solutions.
+By adding additional fields to the onboarding form, this automation can automatically generate your selected ImmyBot installer and attach it to the onboarding ticket. For users receiving pre-deployed hardware, the workflow can instead reassign an existing machine and initiate a maintenance session—ensuring the user is fully prepared on day one.
 
-   Import Form Bundle
-   - Navigate to the Immy Onboarding Handler folder and download the form bundle named: form-019cd2be-c5cc-7733-bf99-83356061dfbc_20260312_145611.bundle.json
-   - Navigate to the Forms section of Rewst and find the 'Import Bundle' button.
-   - Drag and drop the form bundle you downloaded earlier.
-   - Review the list of objects to be imported and confirm the selection.
-  
-   Import Workflow Bundle
-   - Navigate to the Immy Onboarding Handler folder and download the worflow bundle named: workflow-019afff1-45af-7079-85c8-9d09a62a4018_20260312_150235.bundle.json
-   - Navigate to the Workflows section of Rewst and find the 'Import Bundle' button.
-   - Drag and drop the workflow bundle you downloaded earlier.
-   - Review the list of objects to be imported and confirm the selection.
-  
-   Setup Form Trigger
-   - Open your Microsoft: User Onboarding workflow in workflow builder and create a new Form Trigger.
-   - Assign overrides for Connectwise PSA and Immybot using their organization mappings.
-   - Select the new form you just imported.
-  
-   Setup Completion Handler
-   - While stil in your Microsoft: User Onboarding workflow builder, create a new Completion Handler.
-   - Select the newly imported workflow, and configure the Immy Onboarding Handler to run on Onboarding success.
+---
 
-2. Usage
+## 1. Installation
 
-   To use this workflow, simply open the new onboarding form for the desired client. After filling in the normal onboarding information, select 'Customize Advanced Options' -> 'Advanced - Immybot Options'
-   - To prep an existing computer, select 'Use Existing Computer' and select the Immybot computer and person from the dropdowns.
-     - This will cause the selected user to be assigned to the machine in ImmyBot, start a maintenance session for the computer, and update the ticket notes with the session page for the computer.
-   - To prep a new computer for this user, select 'New Immy Installer', and then select the radio button of your desired Immybot Installer format.
-     - For OOBE, choose the .ppkg option. This will update the ticket notes with a download link for a provisioning package specific to this client.
-     - For computers past OOBE, select either the .exe option or the .ps1 option. The .exe option will update the ticket notes with a download link specific to the client. The .ps1 option will attach a Powershell Script file to the ticket attachments.
+This automation assumes the following prerequisites:
 
-  By utilizing this completion handler, technicians can onboard new users and start prepping hardware from the same submission form.
+- An existing **ImmyBot integration** configured in your Rewst environment
+- The **Microsoft: User Onboarding** Crate has already been unpacked
+- A supported PSA system is configured  
+  - This implementation uses **ConnectWise PSA**, but the workflow can be adapted to other ticketing platforms with minor adjustments
 
-3. Improvement Ideas
-   Immybot Azure sync after M365 onboard:
-   - We have clients that frequently re-hire college interns after they graduate. As a result, these users are often in AD and Immybot from their time as an intern, allowing easy computer reassignment via this workflow. However, for brand new hires it will not be possible to assign them to an immy computer until after they are added to Azure and synced.
-   Onboarding Customizations:
-   - If desired, additional options can be enabled for each of the ImmyBot installers, such as tags, auto-onboarding, or default primary users. To make these changes, simply navigate to the ImmyBot installer option task of your choice, open the JSON request body and edit the 'ppkgOptions' or 'onboardingOptions' fields with your desired information.
+---
+
+### Import Form Bundle
+
+1. Navigate to the **Immy Onboarding Handler** folder.
+2. Download the form bundle:  
+   `form-019cd2be-c5cc-7733-bf99-83356061dfbc_20260312_145611.bundle.json`
+3. In Rewst, go to **Forms**.
+4. Select **Import Bundle**.
+5. Drag and drop the downloaded form bundle.
+6. Review the objects to be imported and confirm the selection.
+
+> 📸 *Screenshots of the form import process can be added here.*
+
+---
+
+### Import Workflow Bundle
+
+1. Navigate to the **Immy Onboarding Handler** folder.
+2. Download the workflow bundle:  
+   `workflow-019afff1-45af-7079-85c8-9d09a62a4018_20260312_150235.bundle.json`
+3. In Rewst, go to **Workflows**.
+4. Select **Import Bundle**.
+5. Drag and drop the downloaded workflow bundle.
+6. Review the objects to be imported and confirm the selection.
+
+> 📸 *Screenshots of the workflow import process can be added here.*
+
+---
+
+### Configure Form Trigger
+
+1. Open the **Microsoft: User Onboarding** workflow in the Workflow Builder.
+2. Create a new **Form Trigger**.
+3. Assign organization overrides for:
+   - **ConnectWise PSA**
+   - **ImmyBot**
+4. Select the newly imported onboarding form.
+
+---
+
+### Configure Completion Handler
+
+1. While still in the **Microsoft: User Onboarding** workflow:
+   - Create a new **Completion Handler**.
+2. Select the newly imported **Immy Onboarding Handler** workflow.
+3. Configure it to run upon **successful onboarding completion**.
+
+---
+
+## 2. Usage
+
+To use this workflow:
+
+1. Open the new onboarding form for the desired client.
+2. Complete the standard onboarding fields.
+3. Navigate to:  
+   **Customize Advanced Options → Advanced – ImmyBot Options**
+
+---
+
+### Prepare an Existing Computer
+
+- Select **Use Existing Computer**
+- Choose the appropriate **ImmyBot computer** and **user** from the dropdown menus
+
+This will:
+
+- Assign the selected user to the machine in ImmyBot
+- Start a maintenance session on the device
+- Update the onboarding ticket with a link to the maintenance session page
+
+---
+
+### Prepare a New Computer
+
+- Select **New Immy Installer**
+- Choose your preferred **ImmyBot installer format**
+
+Available options:
+
+- **OOBE (.ppkg)**  
+  - Updates the ticket notes with a client-specific provisioning package download link
+- **Post-OOBE (.exe)**  
+  - Updates the ticket notes with a client-specific executable download link
+- **Post-OOBE (.ps1)**  
+  - Attaches a PowerShell script directly to the ticket
+
+> 📸 *Screenshots of installer selection and ticket updates can be added here.*
+
+---
+
+By leveraging this completion handler, technicians can onboard users and begin hardware preparation from a single submission—streamlining both identity and device readiness workflows.
+
+---
+
+## 3. Improvement Ideas
+
+### ImmyBot Azure Sync After M365 Onboarding
+
+Some organizations frequently rehire former interns or contractors. In these cases, users may already exist in Azure AD and ImmyBot, allowing immediate device reassignment through this workflow.
+
+However, for brand-new hires:
+
+- The user does not exist in Azure or ImmyBot at submission time
+- Device assignment cannot occur until directory synchronization is complete
+
+**Potential Enhancement:**  
+Trigger an ImmyBot Azure sync after Microsoft 365 onboarding completes to enable automatic device assignment for newly created users.
+
+---
+
+### Onboarding Customizations
+
+Additional customization options can be enabled for each ImmyBot installer, including:
+
+- Tags
+- Auto-onboarding behavior
+- Default primary user assignments
+
+To apply these customizations:
+
+1. Navigate to the desired **ImmyBot installer option task**.
+2. Open the **JSON request body**.
+3. Modify the appropriate fields:
+   - `ppkgOptions`
+   - `onboardingOptions`
+
+This allows fine-grained control over how each installer behaves per client or onboarding scenario.
