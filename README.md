@@ -53,8 +53,7 @@ This automation assumes the following prerequisites:
 
 1. Open the **Microsoft: User Onboarding** workflow in the Workflow Builder.
 2. Create a new **Form Trigger**.
-3. Assign organization overrides for:
-   - **ConnectWise PSA**
+3. Assign organization overrides for your specific onboarding toolset and the following additions:
    - **ImmyBot**
 4. Select the newly imported onboarding form.
 
@@ -67,6 +66,8 @@ This automation assumes the following prerequisites:
 2. Select the newly imported **Immy Onboarding Handler** workflow.
 3. Configure it to run upon **successful onboarding completion**.
 
+![Completion Hander screen](images/completionHandler.png)
+
 ---
 
 ## 2. Usage
@@ -77,6 +78,8 @@ To use this workflow:
 2. Complete the standard onboarding fields.
 3. Navigate to:  
    **Customize Advanced Options → Advanced – ImmyBot Options**
+
+![Immybot Advanced Options](images/immyOptions.png)
 
 ---
 
@@ -107,7 +110,6 @@ Available options:
 - **Post-OOBE (.ps1)**  
   - Attaches a PowerShell script directly to the ticket
 
-> 📸 *Screenshots of installer selection and ticket updates can be added here.*
 
 ---
 
