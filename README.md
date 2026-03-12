@@ -28,6 +28,7 @@ This automation assumes the following prerequisites:
 6. Review the objects to be imported and confirm the selection.
 
 ![Form bundle import screen](images/formImport.png)
+
 ![Form accept import screen](images/acceptConfiguration.png)
 
 ---
@@ -43,6 +44,7 @@ This automation assumes the following prerequisites:
 6. Review the objects to be imported and confirm the selection.
 
 ![WF bundle import screen](images/workflowImport.png)
+
 ![WF accept import screen](images/workflowAccept.png)
 
 ---
