@@ -37,7 +37,7 @@ This automation assumes the following prerequisites:
 
 1. Navigate to the **Immy Onboarding Handler** folder.
 2. Download the workflow bundle:  
-   `workflow-019afff1-45af-7079-85c8-9d09a62a4018_20260312_150235.bundle.json`
+   `workflow-019afff1-45af-7079-85c8-9d09a62a4018_20260316_204606.bundle.json`
 3. In Rewst, go to **Workflows**.
 4. Select **Import Bundle**.
 5. Drag and drop the downloaded workflow bundle.
