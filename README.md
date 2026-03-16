@@ -79,7 +79,7 @@ To use this workflow:
 3. Navigate to:  
    **Customize Advanced Options → Advanced – ImmyBot Options**
 
-![Immybot Advanced Options](images/immyOptions.png)
+![Immybot Advanced Options](images/formDemo.gif)
 
 ---
 
